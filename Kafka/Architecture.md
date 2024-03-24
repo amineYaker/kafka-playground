@@ -7,3 +7,10 @@ when used as a pub-sub messaging middleware we identify three high-level compone
 
 ![[Log-based_Message-Brokers.png]]
 Producers send messages by appending them to a topic-partition file and consumers read these files sequentially.
+
+If we see Kafka as a **Streaming Platform** it looks like 
+
+[[KafkaAsStreamingPlatform.png]]
+
+A more generic Architecture could be viewed as [[Kafka_architecture.png]]
+

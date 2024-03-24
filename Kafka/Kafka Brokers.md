@@ -9,3 +9,14 @@ Let's see how a broker handles requests from a producer.
 6. Once the replication of the request is done it is removed from the purgatory and a response is generated and put in the **response queue**
 7. The network thread picks up the response from the response queue and sends it to the corresponding **socket** send buffer, the thread is bound to a certain client it's ready to pick up requests only when the response is sent out.
 ![[Broker.png]]
+
+check [[Ordering Garantees]]
+
+## Load Balancing
+Kafka will assign a whole partition to each one of the consumer clients effectively balancing the load between the two it can detect failures and reroute the messages.
+a **single partition can only ever be assigned to a single server instance** this is invariant implying that the order is guaranteed
+
+## Compacted Topics
+if the data is keyed (has a primary key) we can get rid off the old values if new keys are available this works like the **LSM-trees** so there is a way to optimize the disk space used
+
+in practice we can mix regular Topics with compacted topics and link them via a **Kafka stream job** to get a pattern called the **latest-versioned pattern**

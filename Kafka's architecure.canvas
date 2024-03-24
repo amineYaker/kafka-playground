@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"34c4dd021303cc1b","type":"file","file":"Kafka_architecture.png","x":-240,"y":-600,"width":400,"height":382},
-		{"id":"6cef8d14caf9db56","type":"file","file":"Architecture.md","x":-240,"y":-1100,"width":400,"height":400}
-	],
-	"edges":[
-		{"id":"faf41834fb7e5eb4","fromNode":"6cef8d14caf9db56","fromSide":"right","toNode":"34c4dd021303cc1b","toSide":"right"}
-	]
-}
